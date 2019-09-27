@@ -53,22 +53,22 @@ class Player {
     }
 
     handleInput(e) {
-        if(e === 'left' && player.x !== 0) { //if the player pressed left and he is not in the most left column.
-            player.x -= 100;
+        if(e === 'left' && this.x !== 0) { //if the player pressed left and he is not in the most left column.
+            this.x -= 100;
         }
-        else if(e === 'right' && player.x !== 400) { //if the player pressed right and he is not in the most right column.
-            player.x += 100;
+        else if(e === 'right' && this.x !== 400) { //if the player pressed right and he is not in the most right column.
+            this.x += 100;
         }
         else if(e === 'up') { //if the player pressed up
-            player.y -= 85;
-            if(player.y < 40){ // check if the player reached the water.
-                player.x = 200; //reset the player location.
-                player.y = 380;
+            this.y -= 85;
+            if(this.y < 40){ // check if the player reached the water.
+                this.x = 200; //reset the player location.
+                this.y = 380;
                 alert("Congratulations, You Won!"); //alert the player that they won :)
             }
         }
-        else if(e === 'down' && player.y !== 380) { //if the player pressed down and he is not in the most bottom row.
-            player.y += 85;
+        else if(e === 'down' && this.y !== 380) { //if the player pressed down and he is not in the most bottom row.
+            this.y += 85;
         }
     }
 }
